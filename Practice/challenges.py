@@ -844,3 +844,24 @@ def animals(num1, num2, num3):
     return (num1 * 2) + (num2 + num3) * 4
 
 
+def loves_me(num):
+    """Given a number of petals, returns a string which repeats the
+    phrases 'Loves me' and 'Loves me not' for every alternating petal,
+    and return the last phrase in all caps."""
+
+    # Sets up the string of 'love mes' depending on user's inputted value.
+    new_line = []
+
+    # Appends 'Loves me' to the list for every other index position, with
+    # 'loves me not' as the alternating item.
+    for x in range(num):
+        if x in [0, 2] or (x % 2 == 0):
+            new_line.append('Loves me')
+        else:
+            new_line.append('Loves me not')
+
+    # Uppercases the last value on the list.
+    new_line[-1] = new_line[-1].upper()
+
+    return new_line
+
