@@ -865,3 +865,18 @@ def loves_me(num):
 
     return new_line
 
+
+def sort_by_letter(items):
+    """Sorts each string in a list by the letter in alphabetic ascending order."""
+    # Creates a blank list that will be populated with the final sorted values.
+    final = []
+
+    # Iterates through the given list and appends them to the final list
+    # according to each iteration of the sorted alphabet.
+    for letter in 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz':
+        for value in items:
+            if letter in value:
+                final.append(value)
+
+    # Returns the final, sorted list.
+    return final
