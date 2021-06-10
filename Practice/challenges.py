@@ -880,3 +880,51 @@ def sort_by_letter(items):
 
     # Returns the final, sorted list.
     return final
+
+
+def isSumEqual(firstword, secondword, targetword):
+    """
+    :type firstword: str
+    :type secondword: str
+    :type targetword: str
+    :rtype: bool
+    """
+
+    letters_dict = {}
+
+    letters = 'abcdefghijklmnopqrstuvwxyz'
+    for letter in letters:
+        letters_dict[letter] = str(letters.index(letter))
+
+    conv_firstword, conv_secondword, conv_targetword = '', '', ''
+
+    for i in firstword:
+        conv_firstword += letters_dict[i]
+    for i in secondword:
+        conv_secondword += letters_dict[i]
+    for i in targetword:
+        conv_targetword += letters_dict[i]
+
+    if int(conv_firstword) + int(conv_secondword) == int(conv_targetword):
+        return True
+    else:
+        return False
+
+
+def defangIPaddr(address):
+    """
+    :type address: str
+    :rtype: str
+    """
+    return address.replace('.', '[.]')
+
+
+def runningSum(nums):
+    """
+    :type nums: List[int]
+    :rtype: List[int]
+    """
+    new_list = []
+    for i in range(1, len(nums) + 1):
+        new_list.append(sum(nums[:i]))
+    return new_list
