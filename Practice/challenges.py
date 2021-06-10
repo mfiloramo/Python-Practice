@@ -928,3 +928,18 @@ def runningSum(nums):
     for i in range(1, len(nums) + 1):
         new_list.append(sum(nums[:i]))
     return new_list
+
+
+def shuffle(nums, n):
+    """
+    :type nums: List[int]
+    :type n: int
+    :rtype: List[int]
+    """
+    new_array = []
+    for i in range(0, len(nums)):
+        if len(new_array) <= len(nums) - 1:
+            new_array.append(nums[i])
+            new_array.append(nums[i+n])
+        else:
+            return new_array
