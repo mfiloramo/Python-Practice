@@ -943,3 +943,12 @@ def shuffle(nums, n):
             new_array.append(nums[i+n])
         else:
             return new_array
+
+
+def maximumWealth(accounts):
+    """Returns the maximum sum of a series of account totals (integer lists)."""
+    max_act = 0
+    for account in accounts:
+        if sum(account) > max_act:
+            max_act = sum(account)
+    return max_act
