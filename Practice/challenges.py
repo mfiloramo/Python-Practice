@@ -952,3 +952,13 @@ def maximumWealth(accounts):
         if sum(account) > max_act:
             max_act = sum(account)
     return max_act
+
+
+def kidsWithCandies(candies, extraCandies):
+    kids_list = []
+    for i in candies:
+        if i + extraCandies >= max(candies):
+            kids_list.append(True)
+        else:
+            kids_list.append(False)
+    return kids_list
