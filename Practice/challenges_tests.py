@@ -13,3 +13,10 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(combos_1, 4)
         self.assertEqual(combos_2, 6)
         self.assertEqual(combos_3, 0)
+
+    def test_numJewelsInStones(self):
+        """Will the test_numJewelsInStones function return the proper solution?"""
+        answer_1 = challenges.Solution().numJewelsInStones('aA', 'aAAbbbb')
+        answer_2 = challenges.Solution().numJewelsInStones('z', 'ZZ')
+        self.assertEqual(answer_1, 3)
+        self.assertEqual(answer_2, 0)
