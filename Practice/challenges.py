@@ -1,3 +1,5 @@
+import itertools
+
 def stutter(word):
     """Prints a stuttered version of a string."""
     print(f"{(word.capitalize()[0:2])}... {word.lower()[0:2]}... {word.lower()}.")
@@ -962,3 +964,21 @@ def kidsWithCandies(candies, extraCandies):
         else:
             kids_list.append(False)
     return kids_list
+
+
+# Number of Good Pairs
+    # Given an array of integers nums.
+    # A pair (i,j) is called good if nums[i] == nums[j] and i < j.
+    # Return the number of good pairss
+class Solution(object):
+    def numIdenticalPairs(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        pairs = list(itertools.combinations(nums, 2))
+        matches = 0
+        for i in pairs:
+            if i[0] == i[1]:
+                matches += 1
+        return matches
