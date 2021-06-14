@@ -966,15 +966,16 @@ def kidsWithCandies(candies, extraCandies):
     return kids_list
 
 
-# Number of Good Pairs
-    # Given an array of integers nums.
-    # A pair (i,j) is called good if nums[i] == nums[j] and i < j.
-    # Return the number of good pairss
 class Solution(object):
     def numIdenticalPairs(self, nums):
         """
         :type nums: List[int]
         :rtype: int
+
+        Number of Good Pairs
+        Given an array of integers nums.
+        A pair (i,j) is called good if nums[i] == nums[j] and i < j.
+        Return the number of good pairs.
         """
         pairs = list(itertools.combinations(nums, 2))
         matches = 0
@@ -984,17 +985,19 @@ class Solution(object):
         return matches
 
 
-# Jewels & Stones
-    # You're given strings jewels representing the types of stones that are jewels,
-    # and stones representing the stones you have. Each character in stones is a type
-    # of stone you have. You want to know how many of the stones you have are also jewels.
-    # Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
 class Solution(object):
     def numJewelsInStones(self, jewels, stones):
         """
         :type jewels: str
         :type stones: str
         :rtype: int
+
+        Jewels & Stones
+        You're given strings jewels representing the types of stones that are jewels,
+        and stones representing the stones you have. Each character in stones is a type
+        of stone you have. You want to know how many of the stones you have are also jewels.
+        Letters are case sensitive, so "a" is considered a different type of stone from "A"
         """
         count = 0
         for i in jewels:
@@ -1002,3 +1005,28 @@ class Solution(object):
                 if i == a:
                     count += 1
         return count
+
+
+
+
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+
+        How Many Numbers Are Smaller Than the Current Number
+        Given the array nums, for each nums[i] find out how many numbers in the array are
+        smaller than it. That is, for each nums[i] you have to count the number of valid js
+        such that j != i and nums[j] < nums[i].
+
+        Return the answer in an array.
+        """
+        num_nums = []
+        for i in nums:
+            num_count = 0
+            for a in nums:
+                if a < i:
+                    num_count += 1
+            num_nums.append(num_count)
+        return num_nums
