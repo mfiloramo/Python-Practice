@@ -39,4 +39,15 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(answer_2, "Me Myself and I")
         self.assertEqual(answer_3, "the cow jumped over the moon")
 
+    def test_freqAlphabets(self):
+        """Will the smallerNumbersThanCurrent function return the proper solution?"""
+        answer_1 = challenges.Solution().freqAlphabets("10#11#12")
+        answer_2 = challenges.Solution().freqAlphabets("1326#")
+        answer_3 = challenges.Solution().freqAlphabets("25#")
+        answer_4 = challenges.Solution().freqAlphabets("12345678910#11#12#13#14#15#16#17#18#19#20#21#22#23#24#25#26#")
+        self.assertEqual(answer_1, "jkab")
+        self.assertEqual(answer_2, "acz")
+        self.assertEqual(answer_3, "y")
+        self.assertEqual(answer_4, "abcdefghijklmnopqrstuvwxyz")
+
 
