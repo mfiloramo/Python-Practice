@@ -1111,3 +1111,63 @@ class Solution(object):
             i.remove(i[0])
             newer_sentence = [''.join(i) for i in sentence]
         return ' '.join(newer_sentence).strip()
+
+
+class Solution(object):
+    def freqAlphabets(self, s):
+        """
+        :type s: str
+        :rtype: str
+        Given a string s formed by digits ('0' - '9') and '#' . We want to map s to English lowercase characters as follows:
+
+        Characters ('a' to 'i') are represented by ('1' to '9') respectively.
+        Characters ('j' to 'z') are represented by ('10#' to '26#') respectively.
+        Return the string formed after mapping.
+
+        It's guaranteed that a unique mapping will always exist.
+        """
+        nums = range(1, 27)
+        letters = 'abcdefghijklmnopqrstuvwxyz'
+        dic = {}
+
+        for num, letter in zip(nums, letters):
+            if num <= 9:
+                dic[str(num)] = str(letter)
+            else:
+                dic[str(num) + '#'] = str(letter)
+
+        word = ''
+        final = []
+        nums = range(len(s))
+        answer = ''
+
+        for letter, num in zip(s, nums):
+            if len(s[num:]) > 2:
+                if letter != '#' and s[num+2] != '#':
+                    if s[num+1] != '#':
+                        word += letter
+                        final.append(word)
+                        word = ''
+                    else:
+                        continue
+                elif letter != '#' and s[num+2] == '#':
+                    if num < len(s):
+                        word += s[num:num+3]
+                        final.append(word)
+                        word = ''
+                    else:
+                        word += s[num:num + 2]
+                        final.append(word)
+
+            if len(s[num:]) <= 2:
+                if '#' not in s[num:]:
+                    final.append(letter)
+
+            if len(''.join(final)) == len(s):
+                break
+
+        # Create and return the final answer.
+        for i in final:
+            if i != '#':
+                answer += dic[i]
+        return answer
