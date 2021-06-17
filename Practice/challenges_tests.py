@@ -50,3 +50,13 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(answer_3, "y")
         self.assertEqual(answer_4, "abcdefghijklmnopqrstuvwxyz")
 
+    def test_countConsistentStrings(self):
+        """Will the countConsistentStrings function return the proper solution?"""
+        ans_1 = challenges.Solution().countConsistentStrings("ab", ["ad", "bd", "aaab", "baa", "badab"])
+        ans_2 = challenges.Solution().countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"])
+        ans_3 = challenges.Solution().countConsistentStrings("cad", ["cc", "acd", "b", "ba", "bac", "bad", "ac", "d"])
+        self.assertEqual(ans_1, 2)
+        self.assertEqual(ans_2, 7)
+        self.assertEqual(ans_3, 4)
+
+
