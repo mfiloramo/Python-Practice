@@ -31,7 +31,7 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(answer_3, [0, 0, 0, 0])
 
     def test_sortSentence(self):
-        """Will the smallerNumbersThanCurrent function return the proper solution?"""
+        """Will the sortSentence function return the proper solution?"""
         answer_1 = challenges.Solution().sortSentence("is2 sentence4 This1 a3")
         answer_2 = challenges.Solution().sortSentence("Myself2 Me1 I4 and3")
         answer_3 = challenges.Solution().sortSentence("over4 moon6 jumped3 the1 the5 cow2")
@@ -40,7 +40,7 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(answer_3, "the cow jumped over the moon")
 
     def test_freqAlphabets(self):
-        """Will the smallerNumbersThanCurrent function return the proper solution?"""
+        """Will the freqAlphabets function return the proper solution?"""
         answer_1 = challenges.Solution().freqAlphabets("10#11#12")
         answer_2 = challenges.Solution().freqAlphabets("1326#")
         answer_3 = challenges.Solution().freqAlphabets("25#")
@@ -49,5 +49,4 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(answer_2, "acz")
         self.assertEqual(answer_3, "y")
         self.assertEqual(answer_4, "abcdefghijklmnopqrstuvwxyz")
-
 
