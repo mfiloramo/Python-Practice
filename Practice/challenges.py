@@ -1172,3 +1172,29 @@ class Solution(object):
             if i != '#':
                 answer += dic[i]
         return answer
+
+
+class Solution(object):
+    def countConsistentStrings(self, allowed, words):
+        """
+        :type allowed: str
+        :type words: List[str]
+        :rtype: int
+
+        You are given a string allowed consisting of distinct characters and an array of strings words.
+        A string is consistent if all characters in the string appear in the string allowed.
+
+        Return the number of consistent strings in the array words.
+        """
+        num_consistents = 0
+
+        for item in words:
+            bools = []
+            for letter in item:
+                if letter not in allowed:
+                    bools.append(False)
+                if letter in allowed:
+                    bools.append(True)
+            if all(bools):
+                num_consistents += 1
+        return num_consistents
