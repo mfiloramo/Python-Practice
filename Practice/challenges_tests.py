@@ -59,4 +59,11 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_2, 7)
         self.assertEqual(ans_3, 4)
 
+    def test_numberOfMatches(self):
+        """Will the numberOfMatches function return the proper solution?"""
+        ans_1 = challenges.Solution().numberOfMatches(7)
+        ans_2 = challenges.Solution().numberOfMatches(14)
+        self.assertEqual(ans_1, 6)
+        self.assertEqual(ans_2, 13)
+
 
