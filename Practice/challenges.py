@@ -1225,3 +1225,45 @@ class Solution(object):
             matches += math.floor(teams/2)
             teams -= math.floor(teams/2)
         return int(matches)
+
+
+class Solution(object):
+    def sortString(self, s):
+        """
+        :type s: str
+        :rtype: str
+        Given a string s. You should re-order the string using the following algorithm:
+
+        1. Pick the smallest character from s and append it to the result.
+        2. Pick the smallest character from s which is greater than the last appended character
+           to the result and append it.
+        3. Repeat step 2 until you cannot pick more characters.
+
+        4. Pick the largest character from s and append it to the result.
+        5. Pick the largest character from s which is smaller than the last appended character
+           to the result and append it.
+        6. Repeat step 5 until you cannot pick more characters.
+           Repeat the steps from 1 to 6 until you pick all characters from s.
+
+        7. In each step, If the smallest or the largest character appears more than once you can
+           choose any occurrence and append it to the result.
+
+        Return the result string after sorting s with this algorithm.
+        """
+        s_exp = sorted([i for i in s])
+        new_str = ''
+
+        alpha = 'abcdefghijklmnopqrstuvwxyz'
+
+        while len(s_exp) > 0:
+            for i in alpha:
+                if i in s_exp:
+                    new_str += i
+                    s_exp.remove(i)
+            for i in reversed(alpha):
+                if i in s_exp:
+                    new_str += i
+                    s_exp.remove(i)
+
+        return new_str
+
