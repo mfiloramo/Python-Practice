@@ -66,4 +66,13 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_1, 6)
         self.assertEqual(ans_2, 13)
 
+    def test_sortString(self):
+        """Will the sortString function return the proper solution?"""
+        ans_1 = challenges.Solution().sortString('aaaabbbbcccc')
+        ans_2 = challenges.Solution().sortString('rat')
+        ans_3 = challenges.Solution().sortString('leetcode')
+        self.assertEqual(ans_1, 'abccbaabccba')
+        self.assertEqual(ans_2, 'art')
+        self.assertEqual(ans_3, 'cdelotee')
+
 
