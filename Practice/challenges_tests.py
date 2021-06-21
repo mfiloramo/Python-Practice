@@ -71,8 +71,13 @@ class NamesTestCase(unittest.TestCase):
         ans_1 = challenges.Solution().sortString('aaaabbbbcccc')
         ans_2 = challenges.Solution().sortString('rat')
         ans_3 = challenges.Solution().sortString('leetcode')
+        ans_4 = challenges.Solution().sortString('spo')
+        ans_5 = challenges.Solution().sortString('ggggg')
         self.assertEqual(ans_1, 'abccbaabccba')
         self.assertEqual(ans_2, 'art')
         self.assertEqual(ans_3, 'cdelotee')
+        self.assertEqual(ans_4, 'ops')
+        self.assertEqual(ans_5, 'ggggg')
+
 
 
