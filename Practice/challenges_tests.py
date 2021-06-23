@@ -79,5 +79,15 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_4, 'ops')
         self.assertEqual(ans_5, 'ggggg')
 
+    def test_selfDividingNumbers(self):
+        """Will the sortString function return the proper solution?"""
+        ans_1 = challenges.Solution().selfDividingNumbers(1, 22)
+        ans_2 = challenges.Solution().selfDividingNumbers(47, 85)
+        self.assertEqual(ans_1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22])
+        self.assertEqual(ans_2, [48, 55, 66, 77])
+
+
+
+
 
 
