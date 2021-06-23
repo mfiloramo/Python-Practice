@@ -1267,3 +1267,34 @@ class Solution(object):
 
         return new_str
 
+
+class Solution(object):
+    def selfDividingNumbers(self, left, right):
+        """
+        :type left: int
+        :type right: int
+        :rtype: List[int]
+        A self-dividing number is a number that is divisible by every digit it contains.
+
+        For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
+        A self-dividing number is not allowed to contain the digit zero.
+
+        Given two integers left and right, return a list of all the self-dividing numbers in the range [left, right].
+        """
+        self_divs = []
+
+        assert left > 0 and right > 0, 'The left and right values must be 1 or higher.'
+
+        for num in range(left, right+1):
+            div_bools = []
+            if '0' not in str(num):
+                for digit in str(num):
+                    if num % int(digit) == 0:
+                        div_bools.append(True)
+                    else:
+                        div_bools.append(False)
+            if all(div_bools) and div_bools != []:
+                self_divs.append(num)
+
+        return self_divs
+
