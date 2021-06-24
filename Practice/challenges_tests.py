@@ -86,6 +86,18 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22])
         self.assertEqual(ans_2, [48, 55, 66, 77])
 
+    def test_findTheDifference(self):
+        """Will the findTheDifference function return the proper solution?"""
+        ans_1 = challenges.Solution().findTheDifference('abcd', 'abcde')
+        ans_2 = challenges.Solution().findTheDifference('', 'y')
+        ans_3 = challenges.Solution().findTheDifference('a', 'aa')
+        ans_4 = challenges.Solution().findTheDifference('oaiusdfoijdsoifsd', 'oaiusdfoijdsooifsd')
+        self.assertEqual(ans_1, 'e')
+        self.assertEqual(ans_2, 'y')
+        self.assertEqual(ans_3, 'a')
+        self.assertEqual(ans_4, 'o')
+
+
 
 
 
