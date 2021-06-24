@@ -1032,60 +1032,6 @@ class Solution(object):
         return num_nums
 
 
-# class Solution(object):
-#     def partitionLabels(self, s):
-#         """
-#         :type s: str
-#         :rtype: List[int]
-#         You are given a string s. We want to partition the string into as many parts as
-#         possible so that each letter appears in at most one part.
-#
-#         Return a list of integers representing the size of these parts.
-#
-#         Input: s = "ababcbacadefegdehijhklij"
-#         Output: [9,7,8]
-#
-#         Explanation:
-#             The partition is "ababcbaca", "defegde", "hijhklij".
-#             This is a partition so that each letter appears in at most one part.
-#             A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts.
-#         """
-#
-
-# class Solution(object):
-#     def findAndReplacePattern(self, words, pattern):
-#         """
-#         :type words: List[str]
-#         :type pattern: str
-#         :rtype: List[str]
-#             Given a list of strings 'words' and a string 'pattern', return a list of words[i]
-#             that match pattern. You may return the answer in any order.
-#
-#             A word matches the pattern if there exists a permutation of letters p so that after replacing
-#             every letter x in the pattern with p(x), we get the desired word.
-#
-#             Recall that a permutation of letters is a bijection from letters to letters:
-#             every letter maps to another letter, and no two letters map to the same letter.
-#         """
-
-
-# def perm(words, pattern):
-#     """
-#     :param words: List[str]
-#     :param pattern: str
-#     :return: List[str]
-#     """
-#     bools = []
-#     for i, a in zip(pattern, range(1, len(pattern))):
-#         if pattern[a] == pattern[:a]:
-#            bools.append(True)
-#         elif pattern[a] != any(pattern[:a]):
-#             bools.append(False)
-#     print(bools)
-#
-# perm('a', 'aaa')
-
-
 class Solution(object):
     def sortSentence(self, s):
         """
