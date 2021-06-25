@@ -97,8 +97,16 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_3, 'a')
         self.assertEqual(ans_4, 'o')
 
-
-
+    def test_reverse(self):
+        """Will the findTheDifference function return the proper solution?"""
+        ans_1 = challenges.Solution().reverse(123)
+        ans_2 = challenges.Solution().reverse(-123)
+        ans_3 = challenges.Solution().reverse(0)
+        ans_4 = challenges.Solution().reverse(90798798798797)
+        self.assertEqual(ans_1, 321)
+        self.assertEqual(ans_2, -321)
+        self.assertEqual(ans_3, 0)
+        self.assertEqual(ans_4, 0)
 
 
 
