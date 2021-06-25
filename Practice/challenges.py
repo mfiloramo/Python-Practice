@@ -1264,3 +1264,23 @@ class Solution(object):
             if i in t_list:
                 t_list.remove(i)
         return ''.join(t_list)
+
+
+class Solution(object):
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        Given a signed 32-bit integer x, return x with its digits reversed. If reversing x
+        causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+
+        Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+        """
+        new_int = int(''.join(reversed([i for i in str(x) if i != '-'])))
+        if new_int <= (pow(2, 31) - 1):
+            if str(x)[0] == '-':
+                return new_int * -1
+            else:
+                return new_int
+        else:
+            return 0
