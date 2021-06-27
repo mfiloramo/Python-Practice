@@ -98,7 +98,7 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_4, 'o')
 
     def test_reverse(self):
-        """Will the findTheDifference function return the proper solution?"""
+        """Will the reverse function return the proper solution?"""
         ans_1 = challenges.Solution().reverse(123)
         ans_2 = challenges.Solution().reverse(-123)
         ans_3 = challenges.Solution().reverse(0)
@@ -108,6 +108,12 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_3, 0)
         self.assertEqual(ans_4, 0)
 
-
-
+    def test_isPalindrome(self):
+        """Will the isPalindrome function return the proper solution?"""
+        ans_1 = challenges.Solution().isPalindrome(121)
+        ans_2 = challenges.Solution().isPalindrome(12321)
+        ans_3 = challenges.Solution().isPalindrome(-123)
+        self.assertEqual(ans_1, True)
+        self.assertEqual(ans_2, True)
+        self.assertEqual(ans_3, False)
 
