@@ -1284,3 +1284,19 @@ class Solution(object):
                 return new_int
         else:
             return 0
+
+
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        Given an integer x, return true if x is palindrome integer.
+
+        An integer is a palindrome when it reads the same backward as forward.
+        For example, 121 is palindrome while 123 is not.
+        """
+        if ''.join(list(reversed(str(x)))) == ''.join(list(str(x))):
+            return True
+        else:
+            return False
