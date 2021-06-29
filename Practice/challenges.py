@@ -1381,7 +1381,7 @@ class Solution(object):
 
 class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
-        for num in nums:
+        for num in nums.copy():
             if num == val:
                 nums.remove(val)
         return len(nums)

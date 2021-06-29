@@ -164,3 +164,12 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_1, 2)
         self.assertEqual(ans_2, 1)
         self.assertEqual(ans_3, 5)
+
+    def test_removeElement(self):
+        """Will the removeElement function return the proper solution?"""
+        ans_1 = challenges.Solution().removeElement([1, 2, 3, 4], 4)
+        ans_2 = challenges.Solution().removeElement([1, 2, 2, 2, 2, 3], 2)
+        ans_3 = challenges.Solution().removeElement([1, 7, 6, 5, 4], 1)
+        self.assertEqual(ans_1, 3)
+        self.assertEqual(ans_2, 2)
+        self.assertEqual(ans_3, 4)
