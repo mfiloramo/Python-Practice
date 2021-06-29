@@ -118,7 +118,7 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_3, False)
 
     def test_romanToInt(self):
-        """Will the isPalindrome function return the proper solution?"""
+        """Will the romanToInt function return the proper solution?"""
         ans_1 = challenges.Solution().romanToInt('III')
         ans_2 = challenges.Solution().romanToInt('IV')
         ans_3 = challenges.Solution().romanToInt('IX')
@@ -156,6 +156,11 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_17, 59)
         self.assertEqual(ans_18, 1544)
 
-
-
-
+    def test_removeDuplicates(self):
+        """Will the removeDuplicates function return the proper solution?"""
+        ans_1 = challenges.Solution().removeDuplicates([1, 1, 2])
+        ans_2 = challenges.Solution().removeDuplicates([1, 1])
+        ans_3 = challenges.Solution().removeDuplicates([1, 2, 2, 3, 3, 4, 4, 5, 5, 5])
+        self.assertEqual(ans_1, 2)
+        self.assertEqual(ans_2, 1)
+        self.assertEqual(ans_3, 5)
