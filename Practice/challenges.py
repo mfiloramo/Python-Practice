@@ -1365,3 +1365,16 @@ class Solution:
                 continue
 
         return final_num
+
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        for i in nums.copy():
+            if nums.count(i) > 1:
+                nums.remove(i)
+
+        return len(nums)
