@@ -1378,4 +1378,3 @@ class Solution(object):
                 nums.remove(i)
 
         return len(nums)
-testing
