@@ -1379,9 +1379,21 @@ class Solution(object):
 
         return len(nums)
 
-class Solution:
+class Solution(object):
     def removeElement(self, nums: list[int], val: int) -> int:
         for num in nums.copy():
             if num == val:
                 nums.remove(val)
         return len(nums)
+
+class Solution(object):
+    def twosum(self, array: list, target: int) -> list[int]:
+        """
+        Given an array of integers nums and an integer target, returns
+        indices of the two numbers such that they add up to target.
+        """
+        from itertools import combinations
+
+        for i in combinations(range(len(array)), 2):
+            if array[i[0]] + array[i[1]] == int(target):
+                return list(i)

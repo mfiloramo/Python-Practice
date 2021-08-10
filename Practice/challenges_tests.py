@@ -173,3 +173,12 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_1, 3)
         self.assertEqual(ans_2, 2)
         self.assertEqual(ans_3, 4)
+
+    def test_twosum(self):
+        """Will the twosum function return the proper solution?"""
+        ans_1 = challenges.Solution().twosum([2, 7, 11, 15], 9)
+        ans_2 = challenges.Solution().twosum([3, 2, 4], 6)
+        ans_3 = challenges.Solution().twosum([3, 3], 6)
+        self.assertEqual(ans_1, [0, 1])
+        self.assertEqual(ans_2, [1, 2])
+        self.assertEqual(ans_3, [0, 1])
