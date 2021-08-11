@@ -1397,3 +1397,20 @@ class Solution(object):
         for i in combinations(range(len(array)), 2):
             if array[i[0]] + array[i[1]] == int(target):
                 return list(i)
+
+class Solution(object):
+    def lengthOfLastWord(self, s: str) -> int:
+        """
+        Given a string s consisting of some words separated by some number of
+        spaces, return the length of the last word in the string.
+        """
+        num = 0
+        for i in reversed(s):
+            if i == ' ' and num == 0:
+                pass
+            elif i != ' ':
+                num += 1
+            elif i == ' ' and num > 0:
+                break
+        return num
+

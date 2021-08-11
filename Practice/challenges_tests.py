@@ -182,3 +182,13 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_1, [0, 1])
         self.assertEqual(ans_2, [1, 2])
         self.assertEqual(ans_3, [0, 1])
+
+    def test_lengthOfLastWord(self):
+        """Will the lengthOfLastWord function return the proper solution?"""
+        ans_1 = challenges.Solution().lengthOfLastWord("   fly me   to   the moon  ")
+        ans_2 = challenges.Solution().lengthOfLastWord("a ")
+        ans_3 = challenges.Solution().lengthOfLastWord("Hello World")
+        self.assertEqual(ans_1, 4)
+        self.assertEqual(ans_2, 1)
+        self.assertEqual(ans_3, 5)
+
