@@ -192,3 +192,12 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_2, 1)
         self.assertEqual(ans_3, 5)
 
+    def test_longestprefix(self):
+        """Will the longestprefix function return the proper solution?"""
+        ans_1 = challenges.Solution().longestprefix(["flower", "flow", "flight"])
+        ans_2 = challenges.Solution().longestprefix(["dog", "racecar", "car"])
+        ans_3 = challenges.Solution().longestprefix("")
+        self.assertEqual(ans_1, "fl")
+        self.assertEqual(ans_2, "")
+        self.assertEqual(ans_3, "")
+

@@ -1431,3 +1431,4 @@ class Solution(object):
                     break
             current = temp
         return current
+
