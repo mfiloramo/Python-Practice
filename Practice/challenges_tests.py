@@ -201,3 +201,13 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(ans_2, "")
         self.assertEqual(ans_3, "")
 
+    def test_isintpalindrome(self):
+        """Will the isintpalindrome function return the proper solution?"""
+        ans_1 = challenges.Solution().isintpalindrome(1221)
+        ans_2 = challenges.Solution().isintpalindrome(-123)
+        ans_3 = challenges.Solution().isintpalindrome(12321)
+        ans_4 = challenges.Solution().isintpalindrome(12345)
+        self.assertEqual(ans_1, True)
+        self.assertEqual(ans_2, False)
+        self.assertEqual(ans_3, True)
+        self.assertEqual(ans_4, False)

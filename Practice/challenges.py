@@ -1432,3 +1432,7 @@ class Solution(object):
             current = temp
         return current
 
+class Solution(object):
+    def isintpalindrome(self, x: int) -> bool:
+        """Returns True if given integer is a polindrome, otherwise returns False."""
+        return False if x < 0 else x == int(str(x)[::-1])
